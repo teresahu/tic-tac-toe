@@ -1,5 +1,6 @@
 $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 
+
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
@@ -15,79 +16,54 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+  background-color: #154f33;
+  background-image: url(http://www.transparenttextures.com/patterns/light-wool.png);
+  color: #fff;
 }
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
 
   /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
+  h1 {
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 60px;
+    margin-top: 10px;
     margin-bottom: 0;
     line-height: 40px;
     padding-bottom: 19px;
   }
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-  p + h4 {
-    margin-top: 28px;
-  }
-}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
     max-width: 730px;
   }
-
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
+}
 
   /* Space out the masthead */
-  .header {
+.header {
     margin-bottom: 30px;
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: 1px solid #e5e5e5;
+    display: block;
   }
 
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+.canvasbox {
+  position: absolute;
+  margin: auto;
+  top: 140px;
+  bottom: 0;
+  left: 200px;
+  right: 0;
+  z-index: 100;
+  width: 800px;
+}
+
+canvas {
+  border: 1px solid #e5e5e5;
+  position: relative;
+  -webkit-animation:canvasAnimation 5s;
+}
+
+@-webkit-keyframes canvasAnimation {
+  0%  {-webkit-transform:rotate(90deg);left:0px; top:0px;}
 }
